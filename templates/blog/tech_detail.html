@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ post.title }} · {{ BRAND_NAME }}{% endblock %}
+
+{% block content %}
+{# TODO: W1 — 본문/TOC/Meta. W2 — 댓글 섹션. #}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/tech_detail.css' %}">
+<link rel="stylesheet" href="{% static 'css/tech_detail_animation.css' %}">
+
+<div class="Main">
+    <div class="TocList">
+        <p>ON THIS PAGE</p>
+        <div class="Items">
+            {% for section in sections %}
+            {% if section.kind == 'h2' %}
+            <div class="TocItem">{{section.anchor|slice:'4:'}}. {{section.text}}</div>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+    <div class="Article">
+        <div class="MetaTop">
+            <div class="Top-Chip">{{post.category.label}}</div>
+            <p>{{post.published_at|date:'Y.m.d'}} · {{post.read_minutes}} min · {{post.series_label}}</p>
+        </div>
+        <h1 class="Article-title-1">{{post.title}}</h1>
+        <p class="Article-main-1">{{post.subtitle}} — tokens, units, and the boring middle.</p>
+        <div class="NoteDrivier">
+            <div class="Line"></div>
+        </div>
+        {% for section in sections %}
+        {% if section.kind == 'p' %}
+        <p class="Article-main">{{section.text}}</p>
+        {% elif section.kind == 'h2' %}
+        <h2 class="Article-title-2">
+            {{ section.anchor|slice:'4:' }}. {{ section.text }}
+        </h2>
+        {% elif section.kind == 'code' %}
+        <div class="CodeBlock">
+            <pre>{{ section.text }}</pre>
+        </div>
+        {% endif %}
+        {% endfor %}
+        <div class="NoteDrivier">
+            <div class="Line"></div>
+        </div>
+        <h5 class="Article-title-3">comments · 4</h5>
+        <div class="SignInPrompt">
+            <div class="PromptText">
+                <p>댓글을 남기려면 로그인이 필요해요</p>
+                <p>Sign in to leave a note on this page.</p>
+            </div>
+            <button>Sign in →</button>
+        </div>
+        <div class="CommentItem">
+            <div class="Avatar">JM</div>
+            <div class="Body">
+                <div class="Header">
+                    <p>jaemin</p>
+                    <p>2026.04.28</p>
+                </div>
+                <p class="Body-p">토큰 네이밍 진짜 어렵죠. semantic 레벨까지 가면 의견 갈리고요.</p>
+            </div>
+        </div>
+        <div class="NoteDivider-comments">
+            <div class="Line"></div>
+        </div>
+        <div class="CommentItem">
+            <div class="Avatar">SY</div>
+            <div class="Body">
+                <div class="Header">
+                    <p>soyun</p>
+                    <p>2026.04.29</p>
+                </div>
+                <p class="Body-p">다음 편 기다릴게요. 빌드 파이프라인 부분 궁금해요.</p>
+            </div>
+        </div>
+    </div>
+    <div class="MetaSidebar">
+        <p>META</p>
+        <div class="MetaList">
+            <div class="MetaRow">
+                <p>author</p>
+                <p>아기사자</p>
+            </div>
+            <div class="MetaRow">
+                <p>edited</p>
+                <p>{{post.edited_at|date:'Y.m.d'}}</p>
+            </div>
+            <div class="MetaRow">
+                <p>views</p>
+                <p>{{post.views}}</p>
+            </div>
+            <div class="MetaRow">
+                <p>license</p>
+                <p>{{post.license}}</p>
+            </div>
+        </div>
+        <div class="NoteDivider">
+            <div class="Line"></div>
+        </div>
+        <p class="SHARE">SHARE</p>
+        <div class="ShareGroup">
+            <div class="Share-Chip">copy ⎘</div>
+            <div class="Share-Chip">x</div>
+            <div class="Share-Chip">rss</div>
+        </div>
+    </div>
+</div>
+{% endblock %}

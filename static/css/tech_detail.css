@@ -1,0 +1,434 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Main {
+    display: flex;
+    overflow: hidden;
+    padding: 64px;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 48px;
+    align-self: stretch;
+}
+
+.TocList {
+    display: flex;
+    width: 220px;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.TocList p:nth-child(1) {
+    color: var(--beige-ink-3, #8A6A55);
+    font-family: "JetBrains Mono";
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 1.54px;
+}
+
+.Items {
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    align-self: stretch;
+}
+
+.TocItem {
+    display: flex;
+    padding: 2px 0 2px 10px;
+    border-left: 2px solid var(--beige-line-default, #D9C7A8);
+    align-items: flex-start;
+    color: var(--beige-ink-3, #8A6A55);
+    font-family: Inter;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+}
+
+
+.TocItem:nth-child(1) {
+    color: var(--beige-accent-hover, #C95A2C);
+}
+
+
+.Article {
+    display: flex;
+    width: 680px;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.MetaTop {
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    gap: 8px;
+}
+
+.Top-Chip {
+    display: flex;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: var(--beige-accent-soft, #F8DCCA);
+    align-items: flex-start;
+    gap: 4px;
+    color: var(--beige-accent-ink, #8C3A19);
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: 0.24px;
+}
+
+.MetaTop p:nth-child(2) {
+    color: var(--beige-ink-3, #8A6A55);
+    font-family: "JetBrains Mono";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+}
+
+.Article-title-1 {
+    align-self: stretch;
+    color: var(--beige-ink-1, #3A2419);
+    font-family: Inter;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: -0.8px;
+}
+
+.Article-title-2 {
+    align-self: stretch;
+    color: var(--beige-ink-3, #8A6A55);
+    font-family: Inter;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 185%;
+}
+
+.NoteDrivier {
+    display: flex;
+    height: 0;
+    align-items: flex-start;
+    align-self: stretch;
+}
+
+.Line{
+    width: 680px;
+    height: 1px;
+    border-top: dashed 1px #B59C82;
+}
+
+.Article-main-2 {
+    align-self: stretch;
+    color: var(--beige-ink-1, #3A2419);
+    font-family: Inter;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 185%;
+}
+
+.Article-title-2 {
+    align-self: stretch;
+    color: var(--beige-ink-1, #3A2419);
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 135%;
+}
+
+.Article-main-3 {
+    align-self: stretch;
+    color: var(--beige-ink-1, #3A2419);
+    font-family: Inter;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 185%;
+}
+
+.CodeBlock {
+    display: flex;
+    padding: 16px 20px;
+    border-radius: 8px;
+    border: 1px solid var(--beige-line-default, #D9C7A8);
+    background: var(--beige-bg-sunken, #EFE4D2);
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+}
+
+.CodeBlock pre {
+    align-self: stretch;
+    color: var(--beige-ink-1, #3A2419);
+    font-family: "JetBrains Mono";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 170%;
+}
+
+.Article-main-4 {
+    align-self: stretch;
+    color: var(--beige-ink-1, #3A2419);
+    font-family: Inter;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 185%;
+}
+
+.Article-title-3 {
+    color: var(--beige-ink-1, #3A2419);
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+}
+
+.SignInPrompt {
+    display: flex;
+    padding: 20px;
+    border-radius: 14px;
+    border: 1px solid var(--beige-line-default, #D9C7A8);
+    background: var(--beige-bg-paper, #FBF6EC);
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+}
+
+.PromptText {
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    flex: 1 0 0;
+}
+
+.PromptText p:nth-child(1) {
+    color: var(--beige-ink-1, #3A2419);
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 160%;
+}
+
+.PromptText p:nth-child(2) {
+    color: var(--beige-ink-3, #8A6A55);
+    font-family: Inter;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+}
+
+.SignInPrompt button {
+    display: flex;
+    padding: 10px 16px;
+    border-radius: 8px;
+    background: var(--beige-accent-default, #E8794A);
+    border: 1px solid var(--beige-line-strong, #E8794A);
+    align-items: flex-start;
+    gap: 8px;
+    color: var(--beige-bg-paper, #FBF6EC);
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 160%;
+}
+
+.CommentItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    align-self: stretch;
+}
+
+.Avatar {
+    display: flex;
+    width: 32px;
+    height: 32px;
+    border-radius: 999px;
+    border: 1px solid var(--beige-line-strong, #B59C82);
+    background: var(--beige-accent-soft, #F8DCCA);
+    justify-content: center;
+    align-items: center;
+    color: var(--beige-accent-ink, #8C3A19);
+    font-family: "JetBrains Mono";
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.Body {
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    flex: 1 0 0;
+}
+
+.Header {
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    gap: 12px;
+}
+
+.Header p:nth-child(1) {
+    color: var(--beige-ink-1, #3A2419);
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 160%;
+}
+
+.Header p:nth-child(2) {
+    color: var(--beige-ink-3, #8A6A55);
+    font-family: "JetBrains Mono";
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+}
+
+.Body-p {
+    width: 383px;
+    color: var(--beige-ink-1, #3A2419);
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+}
+
+.NoteDivider-comments {
+    display: flex;
+    width: 688px;
+    height: 0;
+    align-items: flex-start;
+}
+
+.NoteDivider-comments .Line{
+    width: 688px;
+}
+
+
+.MetaSidebar {
+    display: flex;
+    width: 220px;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.MetaSidebar p:nth-child(1) {
+    color: var(--beige-ink-3, #8A6A55);
+    font-family: "JetBrains Mono";
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 1.54px;
+}
+
+.MetaList {
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    align-self: stretch;
+}
+
+.MetaRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-self: stretch;
+}
+
+.MetaRow p:nth-child(1) {
+    color: var(--beige-ink-3, #8A6A55);
+    font-family: "JetBrains Mono";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+}
+
+.MetaRow p:nth-child(2) {
+    color: var(--beige-ink-1, #3A2419);
+    font-family: "JetBrains Mono";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+}
+
+.MetaSidebar .Line{
+    width: 220px;
+}
+
+.SHARE {
+    color: var(--beige-ink-3, #8A6A55);
+    font-family: "JetBrains Mono";
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 1.54px;
+}
+
+.ShareGroup {
+    display: flex;
+    overflow: hidden;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 8px;
+    align-self: stretch;
+    flex-wrap: wrap;
+}
+
+.Share-Chip {
+    display: flex;
+    padding: 4px 10px;
+    border-radius: 999px;
+    border: 1px solid var(--beige-line-strong, #B59C82);
+    align-items: flex-start;
+    gap: 4px;
+    color: var(--beige-ink-2, #5B3A28);
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: 0.24px;
+}

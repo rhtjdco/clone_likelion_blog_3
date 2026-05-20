@@ -1,0 +1,18 @@
+.TocItem:hover {
+    display: inline-flex;
+    color: var(--beige-accent-hover, #C95A2C);
+}
+
+.SignInPrompt button:active {
+    transform: scale(0.98);
+}
+
+.SignInPrompt button:hover {
+    display: inline-flex;
+    background: var(--beige-accent-hover, #C95A2C);
+}
+
+.Share-Chip:hover{
+display: inline-flex;
+background: var(--beige-bg-sunken, #EFE4D2);
+}

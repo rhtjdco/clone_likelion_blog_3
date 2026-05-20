@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block title %}Tech · {{ BRAND_NAME }}{% endblock %}
+
+{% block content %}
+{# TODO: W1 — 아기 사자 작성 영역 #}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/tech_list.css' %}">
+<link rel="stylesheet" href="{% static 'css/tech_list_animation.css' %}">
+
+<div class="Main">
+    <div class="Inner">
+        <div class="HeaderRow">
+            <div class="TitleStack">
+                <p>TECH NOTES</p>
+                <p>만들면서 배운 것들.</p>
+            </div>
+            <div class="SearchBar">
+                <div class="SearchBar-1">⌕</div>
+                <input class="SearchBar-2" type="text" placeholder="search posts…">
+                <div class="Kbd">⌘K</div>
+            </div>
+        </div>
+        <div class="CategoryFilter">
+            <div class="CategoryFilter-Chip-1">All</div>
+            {% for category in categories %}
+            <div class="CategoryFilter-Chip">{{category.label}}</div>
+            {% endfor %}
+        </div>
+        <div class="PostList">
+            {% for post in posts %}
+            <a href="{{ post.get_absolute_url }}">
+                <div class="PostRow">
+                    <p class="PostRow-Date">{{post.published_at}}</p>
+                    <div class="ContnetCol">
+                        <p class="ContnetCol-title">{{post.title}}</p>
+                        <p class="ContnetCol-main">{{post.subtitle}}</p>
+                        <div class="TagRow">
+                            <div class="TagRow-Chip">{{post.category.label}}</div>
+                            {% for tag in post.tags.all %}
+                            <div class="TagRow-Chip">#{{tag.label}}</div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <p class="PostRow-Time">{{post.read_minutes}} min</p>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+        <div class="Rectangle"></div>
+    </div>
+</div>
+{% endblock %}

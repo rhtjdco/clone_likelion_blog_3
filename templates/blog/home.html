@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ BRAND_NAME }}{% endblock %}
+
+{% block content %}
+{# TODO: W1 — 아기 사자 작성 영역 #}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+<link rel="stylesheet" href="{% static 'css/home_animation.css' %}">
+<div class="Main">
+    <div class="Hero">
+        <div class="Inner">
+            <div class="EyebrowRow">
+                <p>{{hero.eyebrow_left}}</p>
+                <p>{{hero.eyebrow_right}}</p>
+            </div>
+            <p class="Hero-title">{{hero.h1_line1}}<br>{{hero.h1_line2}}<span class="Hero-dot">.</span></p>
+            <p class="Hero-main">{{hero.bio_line1}}<br>
+                {{hero.bio_line2}}</p>
+            <p class="Hero-spacer">1</p>
+            <div class="CTAs">
+                <button>최신 글 읽기 →</button>
+                <button>about</button>
+                <button>RSS</button>
+            </div>
+            <p class="CTAs-spacer">2</p>
+            <div class="MetaStrip">
+                <div class="NowWriting">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
+                        <circle cx="4" cy="4" r="4" fill="#E8794A" />
+                    </svg>
+                    <p class="NW-1">now writing</p>
+                    <p class="NW-2">{{hero.now_writing}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="Section">
+        <div class="Inner">
+            <div class="Header">
+                <div class="Header-Frame">
+                    <p class="Header-Frame-1">01</p>
+                    <p class="Header-Frame-2">오늘의 노트</p>
+                </div>
+                <a href="{% url 'tech_list'  %}">
+                    <p class="see-all">see all →</p>
+                </a>
+            </div>
+            <div class="Grid">
+                <a href="{% url 'tech_detail' featured.slug %}">
+                    <div class="FeaturedPost">
+                        <div class="PlaceholderImg">
+                            <p>{{featured.title|slice:'13:'}} · cover</p>
+                        </div>
+                        <div class="Content">
+                            <div class="Content-Frame">
+                                <div class="Content-Chip-1">{{featured.category.label}}</div>
+                                <div class="Content-Chip-2">{{featured.series_label}}</div>
+                                <p>{{featured.date_display}} · {{featured.read_minutes}} min</p>
+                            </div>
+                            <p>{{featured.title}}</p>
+                            <p>토큰을 짓는 일은 결국 이름을 짓는 일이다. 작은 결정에 이름을 붙이는 일 — 그게 시스템이다.</p>
+                            <p>이어 읽기 →</p>
+                        </div>
+                    </div>
+                </a>
+                <div class="LatestList">
+                    <p class="LatestList-title">LATEST · 최근 5편</p>
+                    <p class="LatestList-spacer">3</p>
+                    {% for other in others %}
+                    <a href="{% url 'tech_detail' other.slug %}">
+                        <div class="PostMini">
+                            <div class="PostMini-Frame">
+                                <div class="PostMini-Chip">{{other.category.label}}</div>
+                                <p class="PostMini-date">{{other.published_at|date:"m.d"}}</p>
+                            </div>
+                            <p class="PostMini-title">{{other.title}}</p>
+                        </div>
+                    </a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

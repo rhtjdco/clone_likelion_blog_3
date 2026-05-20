@@ -1,0 +1,15 @@
+.CategoryFilter-Chip:hover {
+    display: inline-flex;
+    background: var(--beige-bg-sunken, #EFE4D2);
+}
+
+.PostRow:hover {
+    .ContnetCol-title {
+        color: var(--beige-accent-hover, #C95A2C);
+    }
+}
+
+.SearchBar:focus-within {
+    display: inline-flex;
+    border: 1px solid var(--beige-line-strong, #B59C82);
+}

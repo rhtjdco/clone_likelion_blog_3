@@ -1,0 +1,46 @@
+button:nth-child(1):hover {
+    display: inline-flex;
+    background: var(--beige-accent-hover, #C95A2C);
+    border: 1px solid var(--beige-line-strong, #C95A2C);
+}
+
+button:nth-child(1):active {
+    background: var(--beige-accent-default, #E8794A);
+    border: 1px solid var(--beige-line-strong, #E8794A);
+    transform: scale(0.98);
+}
+
+button:nth-child(2):hover {
+    display: inline-flex;
+    background: var(--beige-bg-sunken, #EFE4D2);
+}
+
+button:nth-child(2):active {
+    background: var(--beige-accent-default, #F5EDE0);
+    transform: scale(0.98);
+}
+
+button:nth-child(3):hover {
+    display: inline-flex;
+    background: var(--beige-bg-sunken, #EFE4D2);
+}
+
+button:nth-child(3):active {
+    background: var(--beige-accent-default, #F5EDE0);
+    transform: scale(0.98);
+}
+
+.see-all:hover {
+    color: var(--beige-accent-hover, #C95A2C);
+}
+
+.FeaturedPost:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px #3A24190F, 0 8px 20px #3A241912;
+}
+
+.PostMini:hover {
+    .PostMini-title {
+        color: var(--beige-accent-ink, #8C3A19);
+    }
+}

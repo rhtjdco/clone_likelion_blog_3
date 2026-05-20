@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+}
+
+.Main {
+    display: flex;
+    overflow: hidden;
+    padding: 56px 96px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    align-self: stretch;
+}
+
+.Inner {
+    display: flex;
+    width: 920px;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+}
+
+.HeaderRow {
+    display: flex;
+    overflow: hidden;
+    justify-content: space-between;
+    align-items: flex-end;
+    align-self: stretch;
+}
+
+.TitleStack {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+}
+
+.TitleStack p:nth-child(1) {
+    color: var(--beige-ink-3, #8A6A55);
+    font-family: "JetBrains Mono";
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 1.54px;
+}
+
+.TitleStack p:nth-child(2) {
+    color: var(--beige-ink-1, #3A2419);
+    font-family: Inter;
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: -0.88px;
+}
+
+.SearchBar {
+    display: flex;
+    padding: 8px 12px;
+    border-radius: 14px;
+    border: 1px solid var(--beige-line-default, #D9C7A8);
+    background: var(--beige-bg-paper, #FBF6EC);
+    align-items: center;
+    gap: 8px;
+}
+
+.SearchBar-1 {
+    color: var(--beige-ink-3, #8A6A55);
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+}
+
+.SearchBar-2 {
+    width: 180px;
+    color: var(--beige-ink-4, #B59C82);
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    flex: 1;
+    border: none;
+    background: transparent;
+    outline: none;
+}
+
+.Kbd {
+    display: flex;
+    padding: 2px 6px;
+    border-radius: 4px;
+    border: 1px solid var(--beige-line-default, #D9C7A8);
+    background: var(--beige-bg-paper, #FBF6EC);
+    align-items: flex-start;
+    color: var(--beige-ink-2, #5B3A28);
+    font-family: "JetBrains Mono";
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+}
+
+.CategoryFilter {
+    display: flex;
+    overflow: hidden;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 8px;
+    align-self: stretch;
+    flex-wrap: wrap;
+}
+
+.CategoryFilter-Chip {
+    display: flex;
+    padding: 4px 10px;
+    border-radius: 999px;
+    align-items: flex-start;
+    gap: 4px;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: 0.24px;
+    border: 1px solid var(--beige-line-strong, #B59C82);
+    color: var(--beige-ink-2, #5B3A28);
+}
+
+.CategoryFilter-Chip-1 {
+    display: flex;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: var(--beige-accent-soft, #F8DCCA);
+    align-items: flex-start;
+    gap: 4px;
+    color: var(--beige-accent-ink, #8C3A19);
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: 0.24px;
+}
+
+.PostList {
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+}
+
+.PostList a{
+    width: 100%;
+}
+
+
+.PostRow {
+    display: flex;
+    padding: 24px 0;
+    border-top: 1px solid var(--beige-line-default, #D9C7A8);
+    align-items: flex-start;
+    gap: 32px;
+    align-self: stretch;
+}
+
+.PostRow-Date {
+    width: 120px;
+    color: var(--beige-ink-3, #8A6A55);
+    font-family: "JetBrains Mono";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+}
+
+.ContnetCol {
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    flex: 1 0 0;
+}
+
+.ContnetCol-title {
+    color: var(--beige-ink-1, #3A2419);
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+}
+
+.ContnetCol-main {
+    width: 247px;
+    color: var(--beige-ink-3, #8A6A55);
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+}
+
+.TagRow {
+    display: flex;
+    overflow: hidden;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 8px;
+    align-self: stretch;
+    flex-wrap: wrap;
+}
+
+.TagRow-Chip {
+    display: flex;
+    padding: 4px 10px;
+    border-radius: 999px;
+    border: 1px solid var(--beige-line-strong, #B59C82);
+    align-items: flex-start;
+    gap: 4px;
+    color: var(--beige-ink-2, #5B3A28);
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: 0.24px;
+}
+
+.TagRow-Chip:nth-child(1) {
+    background: var(--beige-accent-soft, #F8DCCA);
+    color: var(--beige-accent-ink, #8C3A19);
+}
+
+.PostRow-Time {
+    color: var(--beige-ink-3, #8A6A55);
+    font-family: "JetBrains Mono";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+}
+
+.Rectangle {
+    height: 1px;
+    background: var(--beige-line-default, #D9C7A8);
+    align-self: stretch;
+}
