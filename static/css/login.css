@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Main {
+    display: flex;
+    overflow: hidden;
+    padding: 72px 24px;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+}
+
+.Card {
+    display: flex;
+    width: 420px;
+    overflow: hidden;
+    padding: 40px;
+    border-radius: 14px;
+    border: 1px solid var(--beige-line-default, #D9C7A8);
+    background: var(--beige-bg-paper, #FBF6EC);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.Header {
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    align-self: stretch;
+}
+
+.Header p:nth-child(1) {
+    color: var(--beige-ink-3, #8A6A55);
+    font-family: "JetBrains Mono";
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 1.54px;
+}
+
+.Header p:nth-child(2) {
+    color: var(--beige-ink-1, #3A2419);
+    font-family: Inter;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+    letter-spacing: -0.28px;
+}
+
+.Header p:nth-child(3) {
+    color: var(--beige-ink-3, #8A6A55);
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+}
+
+.NoteDivider {
+    display: flex;
+    height: 0;
+    align-items: flex-start;
+    align-self: stretch;
+}
+
+.Line {
+    width: 340px;
+    height: 1px;
+    border-top: dashed 1px #B59C82;
+}
+
+.Form {
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    align-self: stretch;
+}
+
+.TextField {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    align-self: stretch;
+}
+
+.TextField label {
+    color: var(--beige-ink-3, #8A6A55);
+    font-family: "JetBrains Mono";
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 1.54px;
+}
+
+.TextField input {
+    display: flex;
+    overflow: hidden;
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1px solid var(--beige-line-strong, #B59C82);
+    background: var(--beige-bg-page, #F5EDE0);
+    align-items: center;
+    align-self: stretch;
+    color: var(--beige-ink-4, #B59C82);
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+}
+
+.ForgotRow {
+    display: flex;
+    overflow: hidden;
+    justify-content: flex-end;
+    align-items: flex-start;
+    align-self: stretch;
+}
+
+.ForgotRow p {
+    color: var(--beige-accent-ink, #8C3A19);
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+}
+
+.RememberRow {
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    gap: 8px;
+}
+
+.RememberRow input {
+    display: flex;
+    width: 16px;
+    height: 16px;
+    overflow: hidden;
+    border-radius: 3px;
+    justify-content: center;
+    align-items: center;
+    accent-color: var(--beige-accent-default, #E8794A);
+}
+
+.RememberRow label {
+    color: var(--beige-ink-2, #5B3A28);
+    font-family: Inter;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+}
+
+.btn {
+    display: flex;
+    padding: 12px 16px;
+    border-radius: 8px;
+    background: var(--beige-accent-default, #E8794A);
+    justify-content: center;
+    align-items: flex-start;
+    gap: 8px;
+    align-self: stretch;
+    color: var(--beige-bg-paper, #FBF6EC);
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 160%;
+}
+
+.last-text {
+    align-self: stretch;
+    color: var(--beige-ink-3, #8A6A55);
+    font-family: Inter;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    text-align: center;
+}
+
+.Create {
+    color: var(--beige-accent-ink, #8C3A19);
+    font-weight: 700;
+}

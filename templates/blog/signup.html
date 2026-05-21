@@ -4,4 +4,40 @@
 
 {% block content %}
 {# TODO: W3 — 아기 사자 작성 영역 #}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/signup.css' %}">
+<link rel="stylesheet" href="{% static 'css/signup_animation.css' %}">
+
+<div class="Main">
+    <div class="Card">
+        <div class="Header">
+            <p>SIGN UP · 회원가입</p>
+            <p>처음 오셨네요.</p>
+            <p>Make a paper to leave notes, save posts, and join the conversation.</p>
+        </div>
+        <div class="NoteDiviber">
+            <div class="Line"></div>
+        </div>
+        <div class="Form">
+            <div class="TextField">
+                <label for="user-name">NAME · 이름</label>
+                <input type="text" id="user-name" placeholder="Like Lion">
+            </div>
+            <div class="TextField">
+                <label for="user-email">ID</label>
+                <input type="email" id="user-email" placeholder="babyLion">
+            </div>
+            <div class="TextField">
+                <label for="password">PASSWORD</label>
+                <input type="password" id="password" placeholder="8자 이상, 영문/숫자 포함">
+            </div>
+            <div class="TermsRow">
+                <input type="checkbox" id="checkbox">
+                <label for="checkbox"><span>이용약관</span>과 <span>개인정보 처리방침</span>에 동의합니다.<br>I agree to the <span>Terms</span> and <span>Privacy Policy.</span></label>
+            </div>
+            <button class="btn">Create account →</button>
+        </div>
+        <p class="last-text">이미 계정이 있으신가요? <span class="sign">Sign in</span></p>
+    </div>
+</div>
 {% endblock %}

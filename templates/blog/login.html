@@ -4,4 +4,39 @@
 
 {% block content %}
 {# TODO: W3 — 아기 사자 작성 영역 #}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+<link rel="stylesheet" href="{% static 'css/login_animation.css' %}">
+
+<div class="Main">
+    <div class="Card">
+        <div class="Header">
+            <p>LOGIN · 로그인</p>
+            <p>다시 오셨네요.</p>
+            <p>Welcome back. Sign in to leave notes and comments.</p>
+        </div>
+        <div class="NoteDivider">
+            <div class="Line"></div>
+        </div>
+        <div class="Form">
+            <div class="TextField">
+                <label for="user-email">ID</label>
+                <input type="email" id="user-email" placeholder="you@example.com">
+            </div>
+            <div class="TextField">
+                <label for="password">password</label>
+                <input type="password" id="password">
+            </div>
+            <div class="ForgotRow">
+                <p>forgot password?</p>
+            </div>
+            <div class="RememberRow">
+                <input type="checkbox" id="checkbox">
+                <label for="checkbox">Remember me on this paper</label>
+            </div>
+            <button class="btn">Sign in →</button>
+        </div>
+        <p class="last-text">처음이신가요? <span class="Create">Create an account</span></p>
+    </div>
+</div>
 {% endblock %}

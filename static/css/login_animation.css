@@ -1,0 +1,13 @@
+.TextField input:focus {
+    display: flex;
+    border: 1px solid var(--beige-accent-default, #E8794A);
+}
+
+.ForgotRow p:hover {
+    color: var(--beige-accent-hover, #C95A2C);
+}
+
+
+.Create:hover {
+    color: var(--beige-accent-default, #E8794A);
+}
